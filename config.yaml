@@ -1,0 +1,28 @@
+params:
+  cohort_name: "hello"
+  samples: samples.tsv
+  sphmm: sphmm.tsv
+  f1cutoff: f1cutoff.tsv
+
+  translate:
+    frame: 6
+    codon_table: 11
+  hmm_search:
+    threads: 8
+    msv_threshold: 0.2
+    vit_threshold: 0.2
+    fwd_threshold: 0.2
+    window: "30_10"
+
+
+results:
+  preprocess: "results/mbgc-identify_preprocess"
+  translate: "results/mbgc-identify_translate"
+  hmm_search: "results/mbgc-identify_hmm_search"
+  identify: "results/mbgc-identify_identify"
+  bgc_reads: "results/mbgc-identify_bgc_reads"
+
+logs:
+  preprocess: "logs/mbgc-identify_preprocess"
+  translate: "logs/mbgc-identify_translate"
+  hmm_search: "logs/mbgc-identify_hmm_search"
